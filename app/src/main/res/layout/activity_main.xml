@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textViewMeters"
+        android:layout_width="95dp"
+        android:layout_height="37dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="@string/meters"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.079"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.046" />
+
+    <EditText
+        android:id="@+id/editTextDistance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:ems="10"
+        android:fontFamily="sans-serif-smallcaps"
+        android:gravity="center"
+        android:hint="@string/enter_distance"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.641"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.034" />
+
+    <TextView
+        android:id="@+id/textViewResult"
+        android:layout_width="93dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="@string/result"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.084"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewMeters" />
+
+    <TextView
+        android:id="@+id/textViewAnswer"
+        android:layout_width="245dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.108"
+        app:layout_constraintStart_toEndOf="@+id/textViewResult"
+        app:layout_constraintTop_toBottomOf="@+id/editTextDistance" />
+
+    <RadioGroup
+        android:id="@+id/buttonGroup"
+        android:layout_width="317dp"
+        android:layout_height="282dp"
+        android:checkedButton="@id/buttonClearAll"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.606"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.552">
+
+        <RadioButton
+            android:id="@+id/buttonInches"
+            android:layout_width="310dp"
+            android:layout_height="67dp"
+            android:fontFamily="sans-serif-smallcaps"
+            android:text="@string/to_inches"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/buttonFeet"
+            android:layout_width="310dp"
+            android:layout_height="65dp"
+            android:fontFamily="sans-serif-smallcaps"
+            android:text="@string/to_feet"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/buttonMiles"
+            android:layout_width="310dp"
+            android:layout_height="72dp"
+            android:fontFamily="sans-serif-smallcaps"
+            android:text="@string/to_miles"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/buttonClearAll"
+            android:layout_width="310dp"
+            android:layout_height="70dp"
+            android:fontFamily="sans-serif-smallcaps"
+            android:text="@string/clear_all"
+            android:textSize="18sp" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/buttonConvert"
+        android:layout_width="308dp"
+        android:layout_height="71dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="@string/convert"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonGroup" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
